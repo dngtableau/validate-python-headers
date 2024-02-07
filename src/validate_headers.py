@@ -111,6 +111,10 @@ def main(args):
                     current_header.append(line)
                     if idx == header_length - 1:
                         break
+
+            print('Current Header')
+            print(current_header)
+            
             # Validate it
             if not any(
                 "".join(current_header[: min(len(option), len(current_header))]) == "".join(option)

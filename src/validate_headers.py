@@ -110,8 +110,11 @@ def main(args):
             print('header options')
             print(header_options)
 
+            print('joined option')
+            print("".join(option) for option in header_options)
+
             if not any(
-                "".join(current_header[: min(len(option), len(current_header))]) == "".join(option)
+                current_header == "".join(option)
                 for option in header_options
             ):
                 invalid_files.append(source_path)

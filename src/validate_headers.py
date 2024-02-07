@@ -43,7 +43,9 @@ def get_header_options(
     # print output to the console
     print('current_directory' + current_working_directory)
 
-    os.listdir()
+    arr = os.listdir()
+
+    print(arr)
 
     if isinstance(license_id, str) and len(license_id) > 0:
         license_info = LICENSES.get(license_id)

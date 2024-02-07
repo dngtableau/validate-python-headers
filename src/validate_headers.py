@@ -107,6 +107,9 @@ def main(args):
             print(current_header)
 
             # Validate it
+            print('header options')
+            print(header_options)
+
             if not any(
                 "".join(current_header[: min(len(option), len(current_header))]) == "".join(option)
                 for option in header_options

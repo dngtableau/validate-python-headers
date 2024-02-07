@@ -69,13 +69,8 @@ def get_header_options(
     else:
         raise ValueError("One of the following args needs to be specified: 'license_id', 'license_notice'")
 
-    # Header build
-    year_options = [f"{current_year}"] + [f"{year}-{current_year}" for year in range(starting_year, current_year)]
-    copyright_notices = [[f"# Copyright (C) {year_str}, {owner}.\n"] for year_str in year_options]
-
     return [
-        copyright_notice + [BLANK_LINE] + license_notice
-        for copyright_notice in copyright_notices
+        license_notice
         for license_notice in license_notices
     ]
 

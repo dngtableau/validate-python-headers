@@ -74,10 +74,6 @@ def get_header_options(
     copyright_notices = [[f"# Copyright (C) {year_str}, {owner}.\n"] for year_str in year_options]
 
     return [
-        SHEBANG + [BLANK_LINE] + copyright_notice + [BLANK_LINE] + license_notice
-        for copyright_notice in copyright_notices
-        for license_notice in license_notices
-    ] + [
         copyright_notice + [BLANK_LINE] + license_notice
         for copyright_notice in copyright_notices
         for license_notice in license_notices
@@ -114,7 +110,7 @@ def main(args):
 
             print('Current Header')
             print(current_header)
-            
+
             # Validate it
             if not any(
                 "".join(current_header[: min(len(option), len(current_header))]) == "".join(option)

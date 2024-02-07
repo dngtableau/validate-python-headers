@@ -6,6 +6,7 @@
 
 import json
 from datetime import datetime
+import os
 from pathlib import Path
 from typing import Dict, List, Union
 
@@ -34,6 +35,16 @@ def get_header_options(
 
     # License check
     license_notices = []
+    print('dng license code')
+
+    # get the current working directory
+    current_working_directory = os.getcwd()
+
+    # print output to the console
+    print('current_directory' + current_working_directory)
+
+    os.listdir()
+
     if isinstance(license_id, str) and len(license_id) > 0:
         license_info = LICENSES.get(license_id)
         if not isinstance(license_info, dict):

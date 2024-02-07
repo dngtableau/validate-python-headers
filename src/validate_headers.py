@@ -71,7 +71,6 @@ def get_header_options(
 
     return [
         license_notice
-        for license_notice in license_notices
     ]
 
 

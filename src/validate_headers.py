@@ -103,13 +103,6 @@ def main(args):
                     if idx == header_length - 1:
                         break
 
-            print('Current Header')
-            print(current_header)
-
-            # Validate it
-            print('header options')
-            print(header_options)
-
             if not any(
                 current_header == option
                 for option in header_options
